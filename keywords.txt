@@ -1,0 +1,116 @@
+
+#######################################
+# Syntax Map For DFRobot_HumanDetection
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DFRobot_HumanDetection	KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+configWorkMode	KEYWORD2
+getWorkMode	KEYWORD2
+configLEDLight	KEYWORD2
+getLEDLightState	KEYWORD2
+sensorRet	KEYWORD2
+smHumanData	KEYWORD2
+gitHeartRate	KEYWORD2
+getBreatheState	KEYWORD2
+getBreatheValue	KEYWORD2
+
+smSleepData	KEYWORD2
+getSleepComposite	KEYWORD2
+getSleepStatistics	KEYWORD2
+configSleep	KEYWORD2
+dmInstallAngle	KEYWORD2
+dmGetInstallAngle	KEYWORD2
+dmInstallHeight	KEYWORD2
+dmGetInstallHeight	KEYWORD2
+dmAutoMeasureHeight	KEYWORD2
+dmHumanData	KEYWORD2
+
+track	KEYWORD2
+trackFrequency	KEYWORD2
+unmannedTime	KEYWORD2
+getFallData	KEYWORD2
+getFallTime	KEYWORD2
+staticResidencyTime KEYWORD2
+smHumanData	KEYWORD2
+accumulatedHeightDuration	KEYWORD2
+dmHumanConfig	KEYWORD2
+unattendedTimeConfig	KEYWORD2
+
+dmFallConfig	KEYWORD2
+
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+eSleepMode	LITERAL1
+eFallingMode	LITERAL1
+eFALLLed	LITERAL1
+eHPLed	LITERAL1
+eHumanPresence	LITERAL1
+eHumanMovement	LITERAL1
+eHumanMovingRange	LITERAL1
+eHumanDistance	LITERAL1
+eInOrNotInBed	LITERAL1
+eSleepState	LITERAL1
+eWakeDuration	LITERAL1
+eLightsleep	LITERAL1
+eDeepSleepDuration	LITERAL1
+eSleepQuality	LITERAL1
+eSleepDisturbances	LITERAL1
+eSleepQualityRating	LITERAL1
+eAbnormalStruggle	LITERAL1
+eUnattendedState	LITERAL1
+eAbnormalStruggleSwitch	LITERAL1
+eUnattendedSwitch	LITERAL1
+
+eUnattendedTime	LITERAL1
+esleepDeadline	LITERAL1
+eReportingmode	LITERAL1
+eReportingmodeC	LITERAL1
+eAbnormalStruggleC	LITERAL1
+eUnattendedStateC	LITERAL1
+eUnattendedTimeC	LITERAL1
+esleepDeadlineC	LITERAL1
+
+eExistence	LITERAL1
+eMotion	LITERAL1
+eBodyMove	LITERAL1
+eTrajectorySwitch	LITERAL1
+eSeatedHorizontalDistance	LITERAL1
+eMotionHorizontalDistance	LITERAL1
+eFallState	LITERAL1
+eFallBreakHeight	LITERAL1
+
+eHeightRatioSwitch	LITERAL1
+estaticResidencyState	LITERAL1
+estaticResidencySwitch	LITERAL1
+eFallSensitivity	LITERAL1
+eSeatedHorizontalDistanceC	LITERAL1
+eMotionHorizontalDistanceC	LITERAL1
+eFallBreakHeightC	LITERAL1
+eHeightRatioSwitchC	LITERAL1
+
+eReportFreqC	LITERAL1
+eReportSwitchC	LITERAL1
+eAltTimeC	LITERAL1
+eFallSensitivityC	LITERAL1
+eResidenceSwitchC	LITERAL1
+eMotionHorizontalDistance	LITERAL1
+eResidenceTime	LITERAL1
+
