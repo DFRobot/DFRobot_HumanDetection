@@ -359,7 +359,7 @@ uint8_t DFRobot_HumanDetection::configSleep(eSmSleepConfig sl, uint8_t data)
     uint8_t buf[15];
     switch (sl)
     {
-    case eReportingmodeC: 
+    case eReportingmodeC:
         if (getData(0x84, 0x0F, 1, &data, buf) == 0)
         {
             return 0;
@@ -800,25 +800,26 @@ uint8_t DFRobot_HumanDetection::getData(uint8_t con, uint8_t cmd, uint16_t len, 
 
     while (true)
     {
-        if ((millis() - timeStart1) > 500) 
+        if ((millis() - timeStart1) > 1000)
         {
-            while (_s->available() > 0) 
+            while (_s->available() > 0)
             {
                 _s->read();
             }
-            _s->write(cmdBuf, 9 + len); 
+            _s->write(cmdBuf, 9 + len);
             timeStart1 = millis();
+            count = 0;
         }
 
         if (_s->available() > 0)
         {
             data = _s->read();
-            //DBG(data);
-            //timeStart1 = millis();
+            // DBG(data);
+            // timeStart1 = millis();
         }
 
         // Update timeout check
-        if ((millis() - timeStart) > TIME_OUT) 
+        if ((millis() - timeStart) > TIME_OUT)
         {
             DBG("Time out");
             return 2;
@@ -876,7 +877,7 @@ uint8_t DFRobot_HumanDetection::getData(uint8_t con, uint8_t cmd, uint16_t len, 
             retData[5] = data;
             _len |= data;
             state = CMD_DATA;
-            //DBG(_len);
+            // DBG(_len);
             break;
         case CMD_DATA:
             if (count < _len)
@@ -886,7 +887,7 @@ uint8_t DFRobot_HumanDetection::getData(uint8_t con, uint8_t cmd, uint16_t len, 
             }
             else
             {
-                if (data == sumData(6 + count, retData)) 
+                if (data == sumData(6 + count, retData))
                 {
                     retData[6 + _len] = data;
                     state = CMD_END_H;
