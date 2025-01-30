@@ -765,7 +765,7 @@ class DFRobot_HumanDetection:
 
             if self.ser.in_waiting > 0:
                 data = self.ser.read(1)[0]
-                data = ord(data)
+                # data = ord(data)          # Expects string and not int
                 #print(data)
                 #timeStart = time.time()
 
