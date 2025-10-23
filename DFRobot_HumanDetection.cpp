@@ -763,6 +763,7 @@ uint8_t DFRobot_HumanDetection::dmFallConfig(eDmFallConfig con, uint32_t data)
         {
             ret = 0;
         }
+        break;
     case eResidenceTime:
         sendBuf[0] = data >> 24 & 0xff;
         sendBuf[1] = data >> 16 & 0xff;
@@ -772,6 +773,7 @@ uint8_t DFRobot_HumanDetection::dmFallConfig(eDmFallConfig con, uint32_t data)
         {
             ret = 0;
         }
+        break;
     default:
         break;
     }
