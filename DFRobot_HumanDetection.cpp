@@ -871,15 +871,23 @@ uint8_t DFRobot_HumanDetection::getData(uint8_t con, uint8_t cmd, uint16_t len, 
             }
             break;
         case CMD_LEN_H:
-            retData[4] = data;
-            _len = data << 8;
-            state = CMD_LEN_L;
+            if(data == retData[3]){
+                state = CMD_WHITE;
+            }else{
+                retData[4] = data;
+                _len = data << 8;
+                state = CMD_LEN_L;
+            }
             break;
         case CMD_LEN_L:
-            retData[5] = data;
-            _len |= data;
-            state = CMD_DATA;
-            // DBG(_len);
+            if(data == retData[4]){
+                state = CMD_WHITE;
+            }else{
+                retData[5] = data;
+                _len |= data;
+                state = CMD_DATA;
+                DBG(_len);
+            }
             break;
         case CMD_DATA:
             if (count < _len)
@@ -911,6 +919,7 @@ uint8_t DFRobot_HumanDetection::getData(uint8_t con, uint8_t cmd, uint16_t len, 
         default:
             break;
         }
+
         delay(50);
     }
     delay(50);
